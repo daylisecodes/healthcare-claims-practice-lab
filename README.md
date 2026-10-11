@@ -33,7 +33,7 @@ Daylise Baber
 Portfolio: https://daylise-developer-portfolio.vercel.app
 LinkedIn: https://www.linkedin.com/in/daylise-baber-458b75322/
 
-## Version 1 build notes
+## Current build notes
 
 - Three synthetic claim-readiness scenarios
 - Three synthetic coverage-review scenarios
