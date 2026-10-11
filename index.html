@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Healthcare Claims Practice Lab is a free healthcare claims training and workflow demo using synthetic practice scenarios only." />
+  <meta name="theme-color" content="#164e63" />
+  <title>Healthcare Claims Practice Lab</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-row">
+      <a class="brand" href="index.html" aria-label="Healthcare Claims Practice Lab home">
+        <span class="brand-mark" aria-hidden="true">+</span>
+        <span><strong>Healthcare Claims</strong><small>Practice Lab</small></span>
+      </a>
+      <nav class="top-nav" aria-label="Primary navigation">
+        <a href="#modules">Practice Modules</a>
+        <a href="about.html">About</a>
+        <a href="sources.html">Sources</a>
+        <a href="https://daylise-developer-portfolio.vercel.app" target="_blank" rel="noopener noreferrer">Developer Portfolio</a>
+        <a href="https://www.linkedin.com/in/daylise-baber-458b75322/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="shell hero-grid">
+        <div>
+          <p class="eyebrow">A Healthcare Claims Training &amp; Workflow Demo</p>
+          <h1>Practice healthcare claims thinking without using real patient data.</h1>
+          <p class="hero-copy">A beginner-friendly healthcare administration training demo for practicing claim-readiness checks, coverage-review thinking, privacy awareness, and workflow decisions in a safe simulated environment.</p>
+          <div class="button-row">
+            <a class="button primary" href="#modules">Start practicing</a>
+            <a class="button secondary" href="about.html">How this demo works</a>
+          </div>
+          <p class="micro-note"><strong>Important:</strong> Do not enter or upload real patient information. This demo does not submit claims, verify real benefits, provide medical advice, or replace payer, employer, coding, compliance, or legal guidance.</p>
+        </div>
+        <aside class="hero-card" aria-label="What this demo includes">
+          <p class="eyebrow">Designed for safe practice</p>
+          <h2>Built with clear boundaries</h2>
+          <ul class="check-list">
+            <li>Fictional training scenarios only</li>
+            <li>No accounts, uploads, or patient records</li>
+            <li>No real claim submission or payer connection</li>
+            <li>No copied CMS-1500, UB-04, CPT, or proprietary payer forms</li>
+            <li>Original interface and browser-based practice logic</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section shell" id="modules">
+      <div class="section-heading compact-heading">
+        <p class="eyebrow">Practice dashboard</p>
+        <h2>Complete the three learning modules.</h2>
+        <p>Your progress is tracked only while this page is open. Refreshing the page resets the practice session.</p>
+      </div>
+      <div class="progress-card" aria-live="polite">
+        <div>
+          <strong id="progress-label">0 of 3 modules completed</strong>
+          <span>Session progress</span>
+        </div>
+        <div class="progress-track" aria-hidden="true"><span id="progress-bar"></span></div>
+      </div>
+      <div class="module-grid module-nav-grid">
+        <a class="module-card module-link" href="#claim-readiness">
+          <span class="module-num">01</span>
+          <h3>Claim Readiness Practice</h3>
+          <p>Review synthetic administrative records and identify what is ready versus what needs follow-up.</p>
+          <span class="status-tag">Available</span>
+        </a>
+        <a class="module-card module-link" href="#coverage-review">
+          <span class="module-num">02</span>
+          <h3>Coverage Review Basics</h3>
+          <p>Practice spotting missing or inconsistent coverage information without performing real eligibility verification.</p>
+          <span class="status-tag">Available</span>
+        </a>
+        <a class="module-card module-link" href="#privacy-awareness">
+          <span class="module-num">03</span>
+          <h3>Privacy &amp; Data Awareness</h3>
+          <p>Practice distinguishing safe synthetic training content from information that should stay out of a public demo.</p>
+          <span class="status-tag">Available</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="section alt" id="claim-readiness">
+      <div class="shell">
+        <div class="section-heading">
+          <p class="eyebrow">Module 1</p>
+          <h2>Claim Readiness Practice</h2>
+          <p>Choose a fictional case. Review the administrative information, decide what appears complete, and run the educational readiness check. Training labels are intentionally generic and are not real billing codes.</p>
+        </div>
+
+        <div class="practice-layout">
+          <aside class="case-picker" aria-label="Claim readiness practice cases">
+            <h3>Choose a case</h3>
+            <button class="case-button active" type="button" data-case="caseA"><span>Case A</span><strong>Mostly complete</strong></button>
+            <button class="case-button" type="button" data-case="caseB"><span>Case B</span><strong>Missing information</strong></button>
+            <button class="case-button" type="button" data-case="caseC"><span>Case C</span><strong>Needs follow-up</strong></button>
+            <div class="privacy-note"><strong>Synthetic only.</strong><br />All names, IDs, organizations, and situations in this demo are fictional training content.</div>
+          </aside>
+
+          <div class="practice-card">
+            <div class="case-heading">
+              <div>
+                <p class="eyebrow">Synthetic practice record</p>
+                <h3 id="case-title">Case A — Routine Review</h3>
+              </div>
+              <span class="training-badge">TRAINING DATA</span>
+            </div>
+
+            <div class="case-summary" id="case-summary"></div>
+
+            <form id="readiness-form" class="readiness-form">
+              <fieldset>
+                <legend>What appears complete in this synthetic record?</legend>
+                <label><input type="checkbox" name="patient" /> Patient demographic information is complete</label>
+                <label><input type="checkbox" name="coverage" /> Coverage / payer information is present and needs no follow-up</label>
+                <label><input type="checkbox" name="provider" /> Provider identifier information is present</label>
+                <label><input type="checkbox" name="service" /> Service and diagnosis references are present</label>
+                <label><input type="checkbox" name="dates" /> Dates are present and internally consistent</label>
+                <label><input type="checkbox" name="authorization" /> Authorization requirement has been reviewed when applicable</label>
+                <label><input type="checkbox" name="documentation" /> Supporting documentation status has been reviewed</label>
+              </fieldset>
+              <div class="form-actions">
+                <button class="button primary" type="submit">Run readiness check</button>
+                <button class="text-button" type="button" id="reset-button">Reset my choices</button>
+              </div>
+            </form>
+
+            <div class="result-panel" id="result-panel" aria-live="polite" tabindex="-1"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section shell" id="coverage-review">
+      <div class="section-heading">
+        <p class="eyebrow">Module 2</p>
+        <h2>Coverage Review Basics</h2>
+        <p>This module does not verify real insurance eligibility. It teaches a simple habit: compare the information provided, identify gaps, and know when a scenario should be paused for follow-up.</p>
+      </div>
+
+      <div class="practice-layout">
+        <aside class="case-picker" aria-label="Coverage review practice cases">
+          <h3>Choose a case</h3>
+          <button class="coverage-case-button active" type="button" data-coverage-case="coverageA"><span>Case A</span><strong>Information aligns</strong></button>
+          <button class="coverage-case-button" type="button" data-coverage-case="coverageB"><span>Case B</span><strong>Two gaps</strong></button>
+          <button class="coverage-case-button" type="button" data-coverage-case="coverageC"><span>Case C</span><strong>Date mismatch</strong></button>
+          <div class="privacy-note"><strong>Training reminder.</strong><br />A scenario that looks complete is not a guarantee of payment, coverage, network status, or authorization.</div>
+        </aside>
+
+        <div class="practice-card">
+          <div class="case-heading">
+            <div>
+              <p class="eyebrow">Synthetic coverage snapshot</p>
+              <h3 id="coverage-title">Case A — Information Aligns</h3>
+            </div>
+            <span class="training-badge">FICTIONAL PLAN</span>
+          </div>
+          <div class="case-summary" id="coverage-summary"></div>
+
+          <form id="coverage-form" class="readiness-form">
+            <fieldset>
+              <legend>Select the items that need follow-up in this scenario.</legend>
+              <label><input type="checkbox" name="member" /> Member / subscriber reference</label>
+              <label><input type="checkbox" name="dates" /> Coverage dates compared with service date</label>
+              <label><input type="checkbox" name="status" /> Coverage status information</label>
+              <label><input type="checkbox" name="authorization" /> Authorization requirement</label>
+              <label><input type="checkbox" name="network" /> Network / provider participation information</label>
+            </fieldset>
+            <div class="form-actions">
+              <button class="button primary" type="submit">Check my review</button>
+              <button class="text-button" type="button" id="coverage-reset-button">Reset my choices</button>
+            </div>
+          </form>
+          <div class="result-panel" id="coverage-result-panel" aria-live="polite" tabindex="-1"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="privacy-awareness">
+      <div class="shell">
+        <div class="section-heading">
+          <p class="eyebrow">Module 3</p>
+          <h2>Privacy &amp; Data Awareness</h2>
+          <p>Public demos should stay synthetic. Select the items that should <strong>not</strong> be entered into a public training tool like this one.</p>
+        </div>
+
+        <div class="practice-card privacy-practice-card">
+          <form id="privacy-form" class="readiness-form">
+            <fieldset class="privacy-choice-grid">
+              <legend class="sr-only">Select data that should not be entered into a public training demo</legend>
+              <label><input type="checkbox" name="realName" /><span><strong>Real patient's full name</strong><small>Example: a real person's first and last name</small></span></label>
+              <label><input type="checkbox" name="syntheticName" /><span><strong>Clearly labeled fictional name</strong><small>Example: “Morgan Lee (synthetic)”</small></span></label>
+              <label><input type="checkbox" name="realMemberId" /><span><strong>Real insurance member ID</strong><small>An actual identifier from a health plan</small></span></label>
+              <label><input type="checkbox" name="trainingId" /><span><strong>Fictional training record ID</strong><small>Example: “SYN-1001” created only for the demo</small></span></label>
+              <label><input type="checkbox" name="realMrn" /><span><strong>Real medical record number</strong><small>An identifier from an actual patient record</small></span></label>
+              <label><input type="checkbox" name="genericLabel" /><span><strong>Generic workflow label</strong><small>Example: “Documentation needs follow-up”</small></span></label>
+              <label><input type="checkbox" name="realDob" /><span><strong>Real patient's date of birth</strong><small>An actual individual's birth date</small></span></label>
+              <label><input type="checkbox" name="fictionalDate" /><span><strong>Fictional training date</strong><small>A made-up date used only inside a synthetic scenario</small></span></label>
+            </fieldset>
+            <div class="form-actions">
+              <button class="button primary" type="submit">Check my privacy choices</button>
+              <button class="text-button" type="button" id="privacy-reset-button">Reset my choices</button>
+            </div>
+          </form>
+          <div class="result-panel" id="privacy-result-panel" aria-live="polite" tabindex="-1"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section shell">
+      <div class="boundary-grid">
+        <div class="boundary-card">
+          <p class="eyebrow">What it is</p>
+          <h2>A learning environment</h2>
+          <p>This project is designed to help learners think through healthcare administrative workflows, documentation completeness, basic coverage-review habits, and safe handling boundaries using fictional examples.</p>
+        </div>
+        <div class="boundary-card warning-card">
+          <p class="eyebrow">What it is not</p>
+          <h2>Not a production healthcare system</h2>
+          <p>It is not an EHR, clearinghouse, billing service, payer portal, eligibility system, coding encoder, medical device, or HIPAA-compliant patient-data platform. Do not use it for real claims or real patient information.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-grid">
+      <div><strong>Healthcare Claims Practice Lab</strong><p>Independent educational healthcare technology demo created by Daylise Baber.</p></div>
+      <nav aria-label="Footer navigation">
+        <a href="about.html">About</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="disclaimer.html">Disclaimer</a>
+        <a href="terms.html">Terms</a>
+        <a href="sources.html">Sources</a>
+        <a href="https://daylise-developer-portfolio.vercel.app" target="_blank" rel="noopener noreferrer">Developer Portfolio</a>
+        <a href="https://www.linkedin.com/in/daylise-baber-458b75322/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </nav>
+    </div>
+    <div class="shell footer-note">Free public educational portfolio project. The demo may be used for learning; project code and original training content are not licensed for copying, modification, redistribution, or derivative use. No affiliation with CMS, HHS, AMA, AHA, any insurer, clearinghouse, healthcare employer, certification organization, or commercial claims platform.</div>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
