@@ -2,6 +2,8 @@
 
 Healthcare Claims Practice Lab is a free public educational healthcare technology demo using synthetic training scenarios only. It was created for portfolio and training purposes and is not affiliated with or endorsed by any commercial healthcare or claims entity.
 
+Live demo: https://healthcare-claims-practice-lab.vercel.app/
+
 Anyone may use the live demo to learn from the synthetic scenarios. The source code may be publicly viewable for employer and portfolio review, but this project is **not open-source**. Copying, modifying, republishing, redistributing, selling, sublicensing, or creating derivative works from the project code, original design, or original training content is not permitted without written permission.
 
 ## Current modules
